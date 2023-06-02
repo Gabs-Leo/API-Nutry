@@ -1,8 +1,9 @@
 require('dotenv').config();
-import Express from "express"
-
+import Express from "express";
+import { routes } from "./routes";
 
 const app = Express();
 
-app.get("/", (request, response) => response.json({result: "Hello World"}));
+routes(app);
+
 app.listen(process.env.PORT)
