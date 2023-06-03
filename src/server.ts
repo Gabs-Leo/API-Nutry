@@ -1,4 +1,6 @@
-require('dotenv').config();
+if(process.env.NODE_ENV !== "production")
+    require('dotenv').config();
+
 import Express from "express";
 import { routes } from "./routes";
 import { PrismaClient } from "@prisma/client";
